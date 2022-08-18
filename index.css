@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;800&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;   
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(241, 241, 241);
+  margin: 0;
+}
+
+.dark body {
+  background-color: rgb(22, 22, 22);
+}
+
+a {
+  text-decoration: none;
+}
+
+p, h1, h2, h3, h4, h5 {
+  color: rgb(73, 73, 73);
+  
+}
+
+.dark h1 {
+  color: rgb(192, 192, 192);
+}
+
+h1, h2, h3, h4, h5 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 900;
+  line-height: 1.4;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+p {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dark p {
+  color: rgb(192, 192, 192);
+}
+
+.dark main ul li {
+  color: rgb(192, 192, 192);
+}
+
+h5 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 34px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h1 {
+  font-size: 42px;
+  word-spacing: 5px;
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 34px;
+  }
+}
+
+main {
+  max-width: 80%;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+ul li {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(73, 73, 73);
+}
+
+strong {
+  font-weight: 900;
+}
+
+
+@media only screen and (max-width: 700px) {
+  main {
+    max-width: 80%;
+  }
+}
+
+section {
+  scroll-margin-top: 6rem;
+}
+
+.name {
+  font-family: 'Style Script', cursive;
+  text-transform: capitalize;
+}
+
+
+
+
+/* Responsive Navbar */
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgb(241, 241, 241);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+  z-index: 98;
+  padding: 0;
+  margin: 0;
+}
+
+.dark header {
+  background-color: rgb(22, 22, 22);
+}
+  
+.logo {
+  height: 80px;
+  line-height: 80px;
+  color:rgba(0, 0, 0, 0.6);
+  font-weight: 700;
+  font-size: 1.8em;
+  text-decoration: none;
+  cursor: pointer;
+  padding-left: 50px;
+  font-family: 'Style Script', cursive;
+}
+
+.dark .logo {
+  color: rgb(212, 212, 212);
+}
+
+.logo:hover {
+  color:rgba(0, 0, 0, 0.6);
+}
+
+.dark .logo:hover {
+  color: rgb(212, 212, 212);
+}
+
+.logo:visited {
+  color:rgba(0, 0, 0, 0.6);
+}
+
+.dark .logo:visited {
+  color: rgb(212, 212, 212);
+}
+
+.logo:active {
+  color:rgba(0, 0, 0, 0.6);
+}
+
+.dark .logo:active {
+  color: rgb(212, 212, 212);
+}
+
+
+#menutoggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 80px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(133, 62, 156);
+  color: rgb(241, 241, 241);
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+  
+  #menutoggle.active {
+    background-color: rgb(143, 100, 158);
+  }
+  
+  #menutoggle:hover {
+    background-color: rgb(143, 100, 158);
+  }
+  
+  
+  #navbar {
+  position: relative;
+  height: 80px;
+  right: 140px;
+  background-color: rgb(241, 241, 241);
+  transition: 0.5s;
+  width: 0px;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin: 0;
+  padding: 0;
+  }
+
+  .dark #navbar {
+    background-color: rgb(22, 22, 22);
+  }
+  
+  #navbar.active {
+  width: 400px;
+  }
+  
+  #navbar ul {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  }
+  
+  #navbar ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  }
+  
+  #navbar ul li a {
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
+  padding: 0 15px;
+  color: rgb(133, 62, 156);
+  font-family: 'Alegreya Sans SC', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  }
+  
+  #navbar ul li a:hover {
+    color: rgb(161, 85, 220);
+  }
+  
+  
+  #navbar button {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 15px;
+    color: rgb(133, 62, 156);
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .dark #navbar button {
+    color: rgb(215, 161, 234);
+  }
+  
+  .dark #navbar ul li a {
+    color: rgb(215, 161, 234);
+  }
+
+  #navbar ul li a:hover {
+    color: rgb(161, 85, 220);
+  }
+
+  #navbar button:hover {
+    color: rgb(161, 85, 220);
+  }
+
+  .dark #navbar ul li a:hover {
+    color: rgb(240, 198, 255);
+  }
+
+  .dark #navbar button:hover {
+    color: rgb(240, 198, 255);
+  }
+  
+
+
+  @media (max-width: 1000px) {
+  #navbar {
+  position: fixed;
+  bottom: -100%;
+  right: 0;
+  width: 100%;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  #navbar.active {
+  height: calc(100vh - 80px);
+  bottom: 0;
+  width: 100%;
+  }
+  #navbar ul {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  #navbar ul li a {
+  font-size: 26px;
+  font-weight: 900;
+  padding: 0;
+  }
+  
+  header .logo {
+  height: 80px;
+  line-height: 80px;
+  color:rgba(0, 0, 0, 0.6);
+  font-weight: 700;
+  font-size: 1.7em;
+  text-decoration: none;
+  cursor: pointer;
+  padding-left: 30px;
+  font-family: 'Style Script', cursive;
+  }
+
+}
+
+  @media (max-width: 768px) {
+    #navbar ul li a {
+      font-size: 22px;
+      font-weight: 900;
+      padding: 0;
+      height: 50px;
+      }
+  }
+
+
+
+
+/* Hero image */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.8)), url("./images/sample.jpg");
+  height: 500px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.dark .hero-image {
+  background-image: linear-gradient(rgba(22, 22, 22, 0.7),rgba(22, 22, 22, 1)), url("./images/sample.jpg");
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text h1 {
+  font-family: 'Style Script', cursive;
+  text-transform: capitalize;
+  font-size: 80px;
+  text-shadow: 0 0 50px rgb(255, 255, 255);
+  color:rgb(238, 238, 238);
+  letter-spacing: 0;
+  font-weight: 400;
+  line-height: 100%;
+  margin-bottom: 50px;
+}
+
+.hero-text p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color:rgb(238, 238, 238);
+  text-shadow: 0 0 20px rgb(255, 255, 255);
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  letter-spacing: 2px;
+  font-size: 24px;
+  border:rgba(255, 255, 255, 0.6) dashed 2px;
+  padding: 15px 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .hero-text h1 {
+    font-size: 70px;
+  }
+
+  .hero-text p {
+    font-size: 22px;
+  }
+}
+
+
+
+
+
+/* Main contents */
+
+.flex-container {
+  display: flex;
+  flex-basis: 100%;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 20px 10px;
+}
+
+img {
+  width: 80%;
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media only screen and (max-width: 700px) {
+  .flex-container {
+    max-width: 100%;
+    flex-flow: column wrap;
+    gap: 5px 5px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* Buttons */
+
+.buttons {
+  display: flex;
+  flex-basis: 100%;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 20px 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  .buttons {
+    max-width: 100%;
+    flex-flow: column wrap;
+    gap: 20px 20px;
+
+  }
+}
+
+.buttons button {
+  padding: 20px 40px;
+  text-decoration: none;
+  font-weight: 800;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  border-radius: 15px;
+  border: 3px solid rgb(133, 62, 156);
+  background-color: rgb(133, 62, 156);
+  color:rgb(235, 235, 235);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.buttons button:active {
+  border: 3px solid rgb(133, 62, 156);
+  background-color: rgb(133, 62, 156);
+  color:rgb(235, 235, 235);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.buttons button:visited {
+  border: 3px solid rgb(133, 62, 156);
+  background-color: rgb(133, 62, 156);
+  color:rgb(235, 235, 235);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.buttons button:hover {
+  background-color: rgb(241, 241, 241);
+  color: rgb(133, 62, 156);
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.dark .buttons button:hover {
+  background-color: rgb(22, 22, 22);
+  color: rgb(239, 190, 255);
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+@media only screen and (max-width: 700px) {
+  .buttons button {
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+
+
+/* Footer */
+
+footer {
+  background-color:rgb(80, 80, 80);
+  width: 100%;
+}
+
+
+.dark footer {
+  background-color: rgb(17, 17, 17);
+}
+
+
+.footer-name p {
+  font-weight: 400;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  letter-spacing: 2px;
+  font-size: 18px;
+  color:rgb(255, 255, 255);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+
+
+
+/* Back to top button */
+
+#backButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 98;
+  border: none;
+  outline: none;
+  color: rgb(150, 97, 169);
+  cursor: pointer;
+  padding: 0px;
+  font-size: 18px;
+  background-color: none;
+  background: none;
+}
+
+.dark #backButton {
+  color: rgb(201, 162, 213);
+  filter: none;
+}
+
+.dark #backButton i:hover {
+  color: rgb(244, 208, 255);
+}
+  
+#backButton i {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#backButton i:hover {
+  color: rgb(124, 124, 124);
+}
+
+.lang-eng:hover {
+  cursor: pointer;
+}
+
+.lang-esp:hover {
+  cursor: pointer;
+}
+
+
+
+/* Dark-Light mode */
+
+:root,
+:root.light {
+  --bg-color: rgb(241, 241, 241);
+  --text-color: rgb(73, 73, 73);
+}
+
+:root.dark {
+  --bg-color: rgb(22, 22, 22);
+  --text-color: rgb(192, 192, 192);
+}
+
+body {
+background-color: var(--bg-color);
+color: var(--text-color);
+}
+
+.dark p {
+color: #d4d4d4;
+}
+
+
+.theme-btn {
+cursor: pointer;
+border: none;
+background-color: transparent;
+color: rgb(133, 62, 156);
+}
+
+.theme-btn.light {
+  display: none;
+  color: rgb(133, 62, 156);
+}
+
+.light .theme-btn.dark {
+  display: block;
+  color: rgb(133, 62, 156);
+}
+
+.dark .theme-btn.light {
+  display: block;
+  color: rgb(215, 161, 234);
+}
+
+.dark .theme-btn.dark {
+display: none;
+color: rgb(133, 62, 156);
+}
+
