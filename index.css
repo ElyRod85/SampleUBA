@@ -30,6 +30,10 @@ p, h1, h2, h3, h4, h5 {
   color: rgb(192, 192, 192);
 }
 
+.dark h2 {
+  color: rgb(192, 192, 192);
+}
+
 h1, h2, h3, h4, h5 {
   margin-top: 30px;
   margin-bottom: 10px;
@@ -71,7 +75,7 @@ h3 {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 36px;
 }
 
 h1 {
@@ -82,6 +86,10 @@ h1 {
 @media only screen and (max-width: 800px) {
   h1 {
     font-size: 34px;
+  }
+
+  h1 {
+    font-size: 30px;
   }
 }
 
@@ -471,6 +479,84 @@ img {
 
 
 
+
+
+/* Comparison container */
+
+.comparison-container {
+  display: flex;
+  flex-basis: 85%;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 20px 20px;
+}
+
+img {
+  width: 90%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media only screen and (max-width: 900px) {
+  .comparison-container {
+    max-width: 100%;
+    flex-flow: column wrap;
+    gap: 50px 20px;
+  }
+  img {
+    width: 95%;
+  }
+}
+
+.comparison-container h2 {
+  text-align: center;
+  margin: 10px;
+}
+
+.comp-orig {
+  order: 1;
+  flex-grow: 1;
+  flex-basis: 45%;
+  align-self: center;
+}
+
+.comp-redesign {
+  order: 2;
+  flex-grow: 1;
+  flex-basis: 45%;
+  align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Buttons */
 
 .buttons {
@@ -502,7 +588,7 @@ img {
   text-decoration: none;
   font-weight: 800;
   font-family: 'Alegreya Sans SC', sans-serif;
-  font-size: 22px;
+  font-size: 24px;
   letter-spacing: 3px;
   text-transform: capitalize;
   border-radius: 15px;
@@ -545,6 +631,7 @@ img {
     align-content: center;
     margin-left: auto;
     margin-right: auto;
+    font-size: 20px;
   }
 }
 
@@ -684,4 +771,5 @@ color: rgb(133, 62, 156);
 display: none;
 color: rgb(133, 62, 156);
 }
+
 
